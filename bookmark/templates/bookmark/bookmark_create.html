@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block title %}Bookmark Add{% endblock %}
+
+</head>
+<body>
+    {% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Add" class="btn btn-info btn-sm">
+    </form>
+    {% endblock %}
+</body>
+</html>
